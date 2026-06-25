@@ -14,6 +14,11 @@ jobs:
     # if: github.ref == 'refs/heads/master'
 
     steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v4 # 建议同时检查此 action 是否为最新版本
+        with:
+          node-version: '24' # 或 '24.x'
+
       - name: Checkout code
         uses: actions/checkout@v3
         with:
